@@ -14,4 +14,15 @@
  # *= require_self
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+@import "bootstrap"; @import "adminlte";
+
+body {
+  background-color: #D3D3D3;
+  color: #666666 !important;
+  margin-left: 30px;
+}
+
+.navbar-brand {
+  font-family: 'Monoton', cursive;
+  font-size: 1.5rem;
+}
