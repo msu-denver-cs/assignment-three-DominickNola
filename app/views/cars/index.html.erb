@@ -28,6 +28,9 @@
     <%= text_field_tag(:query) %>
     <%= submit_tag("Model Search") %>
   <% end %>
+  <%= link_to 'Log out',
+    destroy_user_session_path,
+    method: :delete %>
   </tbody>
 </table>
 
