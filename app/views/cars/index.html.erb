@@ -11,9 +11,10 @@
 <table>
   <thead>
   <tr>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Vin</th>
+    <th style="text-align:center">Make</th>
+    <th style="text-align:center">Model</th>
+    <th style="text-align:center">Vin</th>
+    <th style="text-align:center">Parts</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -24,6 +25,9 @@
       <td><%= car.make.name %></td>
       <td><%= car.car_model %></td>
       <td><%= car.vin_number %></td>
+      <td><% car.parts.each do |part| %>
+          <li><%= part.part_name %></li>
+        <% end %></td>
       <td><%= link_to 'Show', car %></td>
       <td><%= link_to 'Edit', edit_car_path(car) %></td>
       <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

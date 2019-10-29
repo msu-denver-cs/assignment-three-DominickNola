@@ -17,15 +17,10 @@
 
 <p>
   <strong>Parts:</strong>
-  <%= @car.parts.name %>
-</p>
-
-<p>
-  <strong>Parts:</strong>
 </p>
 <ul>
-  <% @car.parts.each do |p| %>
-    <li><%= p.part_name %></li>
+  <% @car.parts.each do |part| %>
+    <li><%= part.part_name %></li>
   <% end %>
 </ul>
 
