@@ -12,23 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :make_id %>
+    <%= form.label :name, 'Make: ' %>
     <%= form.collection_select :make_id, Make.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= form.label :car_model %>
+    <%= form.label :name, 'Model: ' %>
     <%= form.text_field :car_model %>
   </div>
 
   <div class="field">
-    <%= form.label :vin_number %>
+    <%= form.label :name, 'Vin Number: ' %>
     <%= form.text_field :vin_number %>
   </div>
 
-  <div class="field">
-    <%= form.label :part_id %>
-    <%= form.collection_select(:part_id, Part.all, :id, :part_name) %>
+  <div class="col-md-4 checkbox-list">
+    <%= form.label :name, 'Parts: ' %>
+    <br>
+    <%= form.collection_check_boxes(:part_ids, Part.all, :id, :part_name, :item_wrapper_class => 'checkbox_container')  %>
   </div>
 
   <div class="actions">
