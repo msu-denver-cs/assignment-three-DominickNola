@@ -15,5 +15,20 @@
   <%= @car.vin_number %>
 </p>
 
+<p>
+  <strong>Parts:</strong>
+  <%= @car.parts.name %>
+</p>
+
+<p>
+  <strong>Parts:</strong>
+</p>
+<ul>
+  <% @car.parts.each do |p| %>
+    <li><%= p.part_name %></li>
+  <% end %>
+</ul>
+
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

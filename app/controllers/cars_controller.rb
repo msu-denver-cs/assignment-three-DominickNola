@@ -38,6 +38,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     @makes = Make.all
+    @parts = Part.all
 
     respond_to do |format|
       if @car.save
