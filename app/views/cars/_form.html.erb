@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :make_id %>
+    <%= form.label :name, 'Make: ' %>
     <%= form.collection_select :make_id, Make.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= form.label :car_model %>
+    <%= form.label :name, 'Model: ' %>
     <%= form.text_field :car_model %>
   </div>
 
   <div class="field">
-    <%= form.label :vin_number %>
+    <%= form.label :name, 'Vin Number: ' %>
     <%= form.text_field :vin_number %>
   </div>
 

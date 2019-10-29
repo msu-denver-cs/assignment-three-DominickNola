@@ -6,6 +6,13 @@
 //  width: 40%;
 //}
 
-.checkbox_container input {
-  display: inline;
+.checkbox-list input[type="checkbox"] {
+  display: inline-block;
+  width: 10%;
+}
+
+.checkbox-list input[type="checkbox"] + label {
+  display: inline-block;
+  margin-left: 6%;
+  width: 75%;
 }
